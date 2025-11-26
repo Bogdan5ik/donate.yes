@@ -130,6 +130,7 @@ $results = mysqli_query($con, $select);
 </body>
 </html>
 
+						
 <script>
 	let edits = document.querySelectorAll('.edit');
 
