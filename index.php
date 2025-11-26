@@ -98,21 +98,22 @@ $results = mysqli_query($con, $select);
 
 					<form action="deletTwit.php">
 						
-					<input style="display: none;" type="number" name="id" value="<?php echo $post['id']; ?>">
+					<div style="display: flex;"><input style="display: none;" type="number" name="id" value="<?php echo $post['id']; ?>">
 					<button style="border: none;"><img src="delete_icon.png" alt="" style="height: 2rem;"></button>
 
 					</form>
 
                     <img class="edit" src="edit.png" alt="" style="height: 2rem;">
+				</div>
 
 					<form action="update.php">
 					<div class="col-5 forr" style="display: none;">
 						<input name="id" value="<?php echo $post['id']?>" style="display: none;">
 						<input value="<?php echo $post['title'] ?>" type="text" class="form-control mt-2" placeholder="Заголовок проекта" name="title">
                         <input value="<?php echo $post['text'] ?>" type="text" class="form-control mt-2" placeholder=" Описание проекта" name="text">
+                        <input value="<?php echo $post['img'] ?>" type="text" class="form-control mt-2" placeholder="Адрес картинки" name="image">
                         <input value="<?php echo $post['goal'] ?>" type="number" class="form-control mt-2" placeholder="Сколько надо собрать денег? " name="goal">
                         <input value="<?php echo $post['donated'] ?>" type="number" class="form-control mt-2" placeholder="сколько на данный момент есть денег?" name="donated">
-                        <input value="<?php echo $post['img'] ?>" type="text" class="form-control mt-2" placeholder="Адрес картинки" name="image">
                         <button class="btn btn-success mt-4">Изменить</button>
 					</div>
 					</form>
@@ -142,6 +143,5 @@ $results = mysqli_query($con, $select);
 		}
     });
 });
-
 
 </script>
