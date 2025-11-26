@@ -108,7 +108,6 @@ $results = mysqli_query($con, $select);
 					<form action="update.php">
 					<div class="col-5 forr" style="display: none;">
 						<input name="id" value="<?php echo $post['id']?>" style="display: none;">
-						<p style="color: red;">Заполните все строки</p>
 						<input value="<?php echo $post['title'] ?>" type="text" class="form-control mt-2" placeholder="Заголовок проекта" name="title">
                         <input value="<?php echo $post['text'] ?>" type="text" class="form-control mt-2" placeholder=" Описание проекта" name="text">
                         <input value="<?php echo $post['goal'] ?>" type="number" class="form-control mt-2" placeholder="Сколько надо собрать денег? " name="goal">
@@ -143,5 +142,6 @@ $results = mysqli_query($con, $select);
 		}
     });
 });
+
 
 </script>
